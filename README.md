@@ -35,12 +35,14 @@ To run the project locally, follow these steps:
 3. Install the required dependencies:
    npm install
    
+4. Add this API url in env file as shown in env.example file
+    `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
 
-4. Run the project:
+5. Run the project:
    npm start
    
 
-5. Open your browser and navigate to `http://localhost:3000` to view the application.
+6. Open your browser and navigate to `http://localhost:3000` to view the application.
 
 ## Available Scripts
 
