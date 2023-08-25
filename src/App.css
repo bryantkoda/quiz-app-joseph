@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.primary-btn.large-btn {
+  @apply min-h-[50px] px-[30px] sm:px-[100px] bg-primary flex justify-center items-center text-white text-[16px] sm:text-[18px] font-medium uppercase tracking-[1px] rounded-md;
+}
+.primary-btn {
+  @apply min-h-[35px] px-[20px] sm:px-[50px] bg-primary flex justify-center items-center text-white text-[14px] sm:text-[16px] font-medium capitalize tracking-[1px] rounded-md;
+}
+.primary-btn:disabled {
+  @apply opacity-50;
+}
+.custom-checkbox:checked + label {
+  @apply bg-secondary border-secondary;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.accordion__button {
+  background: transparent !important;
+  @apply px-4 py-3 outline-none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.accordion__item {
+  border-radius: 10px;
+  background: transparent;
+  margin: 10px 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.accordion__item .accordion__panel{
+    @apply p-3;
 }
-
-.App-link {
-  color: #61dafb;
+.que-card {
+  @apply relative bg-white z-20;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.que-card:after,
+.que-card:before {
+  content: "";
+  @apply absolute top-0 bottom-0 left-0 right-0 h-[100%] w-[100%] rounded-lg;
+}
+.que-card:before {
+  @apply bg-primary z-0 rotate-3;
+}
+.que-card:after {
+  @apply bg-secondary z-10 -rotate-3;
+}
+.questions-outer {
+  background: #fff url("./assets/images/quiz.jpg");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+@media (max-width: 1024px) {
+  .questions-outer {
+    @apply bg-none;
   }
 }
